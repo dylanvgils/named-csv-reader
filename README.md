@@ -1,7 +1,7 @@
 # Named csv reader
 Package named csv reader provides methods to easly read csv files and parse columsn to basic types.
 
-This package is not a CSV parser, it uses the [encodig/csv reader](https://pkg.go.dev/encoding/csv#NewReader) to prase the csv file.
+This package is not a CSV parser, it uses the [encodig/csv reader](https://pkg.go.dev/encoding/csv#NewReader) to parse the csv file.
 
 ## Installation
 ```
