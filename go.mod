@@ -1,4 +1,4 @@
-module github.com/dylanvgils/named-csv-reader
+module github.com/dylanvgils/namedcsvreader
 
 go 1.17
 
