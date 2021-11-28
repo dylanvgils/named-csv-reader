@@ -20,7 +20,7 @@ if err != nil {
 }
 
 for record := range namedcsvreader.NewReader(file).Read() {
-    fmt.Printf("Name: %s; Age: %dd\n", record.GetString("name"), record.GetInt("age")))
+    fmt.Printf("Name: %s; Age: %d\n", record.GetString("name"), record.GetInt("age"))
 }
 
 // Output:
@@ -31,6 +31,8 @@ for record := range namedcsvreader.NewReader(file).Read() {
 ```
 
 ### CSV file without headers
+Read a csv file that does not contain headers, by specifying your own.
+
 ```go
 file, err := os.Open("testdata/valid_without_headers.csv")
 if err != nil {
@@ -40,8 +42,8 @@ if err != nil {
 reader := namedcsvreader.NewReader(file).
     WithHeaders("name", "age")
 
-for record := range namedcsvreader.NewReader(file).Read() {
-    fmt.Printf("Name: %s; Age: %dd\n", record.GetString("name"), record.GetInt("age")))
+for record := range reader.Read() {
+    fmt.Printf("Name: %s; Age: %d\n", record.GetString("name"), record.GetInt("age"))
 }
 
 // Output:
